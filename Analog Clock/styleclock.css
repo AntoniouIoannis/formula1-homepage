@@ -1,0 +1,81 @@
+.audiowide-regular {
+    font-family: "Audiowide", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Audiowide", sans-serif;
+    color: #ffffff;
+}
+
+body{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 100vh;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    /* border: 2px solid rgba(255, 255, 255, 0.25); */
+    background-color: #212121;
+}
+
+.container{
+    position: relative;
+}
+
+.clock{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    /*background-image: url(./my_logo_eap_300x133-remove.png);*/
+    /* background-repeat: no-repeat; */
+    /* background-size: contain; */
+    /* background-position: center; */
+    box-shadow: 0px 0px 50px rgb(222, 150, 222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px; /* me αυτο οι αριθμοι ειναι εξω απο κυκλο */
+    text-align: center;  /* με αυτο μπηκαν μεσα */
+}
+
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgb(255, 0, 128);
+    z-index: 2;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: 4px;
+    height: var(--h);
+    border-radius: 8px;
+}

@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    font-family: fantasy;
+    background-color: black;
+}
+.f1-container{
+    background-color: black;
+    color: white;
+    margin: 0px;
+}
+
+.font-header{
+    font-family: "Audiowide", sans-serif;
+}
+.menu > li{
+    color: red;
+}
